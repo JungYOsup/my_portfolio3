@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>portfolio</title>
+  </head>
+  <body>
+    <!-- aria-label 사용해보자 -->
+    <!-- nav -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <i class="fas fa-baby" class="navbar__logo__icon"></i>
+        <a href="#">Korin</a>
+      </div>
+      <div>
+        <ul class="navbar__lists">
+          <li class="navbar__list active">Home</li>
+          <li class="navbar__list">About</li>
+          <li class="navbar__list">Skills</li>
+          <li class="navbar__list">Resume</li>
+          <li class="navbar__list">My work</li>
+          <li class="navbar__list">Contact</li>
+        </ul>
+      </div>
+    </nav>
+    <!-- home-->
+    <!-- p태그에 따라 바뀌는 현상 -->
+    <section id="home">
+      <img src="" alt="" class="home__img" />
+      <h2>Hello, My Name is</h2>
+      <h1>Jung Yosup</h1>
+      <div class="home__description">
+        <p class="home__description__major">
+          A Front-end Developer & Constant Learner
+        </p>
+      </div>
+      <button class="home__btn">Know more</button>
+    </section>
+
+    <!-- about -->
+    <section id="about">
+      <img src="/assets/img/yosup.jpg" alt="my profile" class="about__img" />
+      <div class="about__container">
+        <h2 class="about__container__title">About me</h2>
+        <h3 class="about__container__subtitle">Who AM I</h3>
+        <p class="about__container__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+          perspiciatis sed dignissimos hic harum, explicabo sint quasi mollitia
+          facilis. Inventore, quaerat! Deleniti enim, adipisci impedit ea porro
+          provident placeat culpa.
+        </p>
+
+        <div class="about__container__majors">
+          <div class="major">
+            <div class="major__icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h2 class="major__title">Front-end</h2>
+            <div class="major__description">
+              <span>HTML, CSS, Javascript, React, Web APIs</span>
+            </div>
+          </div>
+          <div class="major">
+            <div class="major__icon"><i class="fas fa-mobile-alt"></i></div>
+            <h2 class="major__title">Mobile</h2>
+            <div class="major__description">
+              <span>React Native</span>
+            </div>
+          </div>
+          <div class="major">
+            <div class="major__icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h2 class="major__title">Back-end</h2>
+            <div class="major__description">Java</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skills -->
+    <!-- js로 나중에 자동으로 올라가는 모습을 보여주면 더 좋겠다. -->
+    <!-- 동적으로 데이터가 추가 될수 있게끔 -->
+    <section id="skills">
+      <div class="skills__container">
+        <h2 class="skills__container__title">Skills</h2>
+        <h3>Skill & Attributes</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+          perspiciatis sed dignissimos hic harum, explicabo sint quasi mollitia
+          facilis. Inventore, quaerat! Deleniti enim, adipisci impedit ea porro
+          provident placeat culpa.
+        </p>
+        <div class="skillsbox">
+          <div class="skillsbox__left">
+            <h3 class="skill__title">Skills</h3>
+            <div class="skill">
+              <div class="skill__list">
+                <span>HTML</span>
+                <span>90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__list">
+                <span>CSS</span>
+                <span>85%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__list">
+                <span>Javascript</span>
+                <span>80%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__list">
+                <span>React</span>
+                <span>70%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__list">
+                <span>Java</span>
+                <span>80%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skillsbox__right">
+            <div class="tools">
+              <h3 class="skillset__title">Tools</h3>
+              <ul class="tools__list">
+                <li><span>Visual Studio Code</span></li>
+                <li><span>eclipse</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillset__title">Etc</h3>
+              <ul class="etc__list">
+                <li><span>Git</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- my resume -->
+    <section id="resume">
+      <div class="resume__container">
+        <h2 class="resume__title">MY RESUME</h2>
+        <h3 class="resume__subtitle">My Awesome story</h3>
+        <div class="resume__inform">
+          <div class="resume__inform__box">
+            <i class="fas fa-map-marker-alt resume__icon" ></i>
+            <h3>computer Science</h3>
+            <div>
+              <span aria-label="Admission year-Graduation year" class="resume__date">
+                2007-2011
+              </span>
+              <span> |Havard University </span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+              soluta quae aut aliquam est ducimus cum assumenda asperiores
+              molestias quisquam dignissimos delectus sunt tempore suscipit
+              repudiandae facere omnis, vitae iste!
+            </p>
+          </div>
+          <div class="resume__inform__box"">
+            <i class="fas fa-map-marker-alt resume__icon" cl></i>
+            <h3>computer Science</h3>
+            <div>
+              <span aria-label="Admission year-Graduation year" class="resume__date">
+                2007-2011
+              </span>
+              <span> |Havard University </span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+              soluta quae aut aliquam est ducimus cum assumenda asperiores
+              molestias quisquam dignissimos delectus sunt tempore suscipit
+              repudiandae facere omnis, vitae iste!
+            </p>
+          </div>
+          <div class="resume__inform__box"">
+            <i class="fas fa-map-marker-alt resume__icon"></i>
+            <h3>computer Science</h3>
+            <div>
+              <span aria-label="Admission year-Graduation year" class="resume__date">
+                2007-2011
+              </span>
+              <span> |Havard University </span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+              soluta quae aut aliquam est ducimus cum assumenda asperiores
+              molestias quisquam dignissimos delectus sunt tempore suscipit
+              repudiandae facere omnis, vitae iste!
+            </p>
+          </div>
+          <div class="resume__inform__box"">
+            <i class="fas fa-map-marker-alt resume__icon"></i>
+            <h3>computer Science</h3>
+            <div>
+              <span aria-label="Admission year-Graduation year" class="resume__date">
+                2007-2011
+              </span>
+              <span> |Havard University </span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+              soluta quae aut aliquam est ducimus cum assumenda asperiores
+              molestias quisquam dignissimos delectus sunt tempore suscipit
+              repudiandae facere omnis, vitae iste!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- my work -->
+    <!-- 상세정보 눌렀을때 Youtube 창으로  -->
+    <!-- 이 곳까지 스크롤 될떄 포트폴리오를 다운로드 받을건지  한번만 물어본다?(해도되고 어려우면 안해도됨) -->
+    <!-- 동적으로 category__count 변할수 있게끔 -->
+    <section id="work">
+  
+      <h1>MY WORK</h1>
+      <h2>project</h2>
+      <div class="work__categories">
+        <button class="category__btn">
+          All<span class="category__count" aria-label="count">8</span>
+        </button>
+        <button class="category__btn">
+          Front-end<span class="category__count" aria-label="count">3</span>
+        </button>
+        <button class="category__btn">
+          Back-end<span class="category__count" aria-label="count">3</span>
+        </button>
+        <button class="category__btn">
+          Mobile<span class="category__count" aria-label="count">2</span>
+        </button>
+      </div>
+      <div class="work__projects">
+        <a href="#" class="project">
+          <img src="" alt="" />
+          <div class="project__description">
+            <h3>Youtuve Site</h3>
+            <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+        <a href="#" class="project">
+          <img src="" alt="" />
+          <div class="project__description">
+            <h3>Youtuve Site</h3>
+            <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+        <a href="#" class="project">
+          <img src="" alt="" />
+          <div class="project__description">
+            <h3>Youtuve Site</h3>
+            <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+        <a href="#" class="project">
+          <img src="" alt="" />
+          <div class="project__description">
+            <h3>Youtuve Site</h3>
+            <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+        <a href="#" class="project">
+          <img src="" alt="" />
+          <div class="project__description">
+            <h3>Youtuve Site</h3>
+            <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+        <a href="#" class="project">
+          <img src="" alt="" />
+          <div class="project__description">
+            <h3>Youtuve Site</h3>
+            <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+        <a href="#" class="project">
+          <img src="" alt="" />
+          <div class="project__description">
+            <h3>Youtuve Site</h3>
+            <span>Clone coding with HTML and CSS</span>
+          </div>
+        </a>
+      </div>
+  
+    </section>
+
+    <!-- contact -->
+    <!-- button을 눌렀을때 진짜로 메일이 가게끔 -->
+    <section id="contact">
+      <h1>CONTACT ME</h1>
+      <h2>GET In Touch</h2>
+    </section>
+  </body>
+</html>
