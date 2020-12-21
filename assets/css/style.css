@@ -553,6 +553,7 @@
   padding: 15px;
   margin-bottom: 40px;
   width: 100%;
+  color: var(--color-light-white);
 }
 
 .contact__btn {
@@ -618,6 +619,10 @@
     var(--color-aquablue)
   );
   left: 40px;
+}
+
+.success {
+  border-color: var(--color-dark-aquablue);
 }
 
 @media screen and (max-width: 760px) {

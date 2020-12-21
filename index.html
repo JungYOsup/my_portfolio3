@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- defer를 안해주니까 왜 HTML을 못 읽는거지? -->
     <script defer src="/assets/js/portfolio.js"></script>
+    <!-- email -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
@@ -87,7 +92,7 @@
               <i class="fas fa-server"></i>
             </div>
             <h2 class="major__title">Back-end</h2>
-            <div class="major__description">Java,Spring,Servlet,Jsp,SQL</div>
+            <div class="major__description">Java, Spring, Servlet, Jsp, SQL</div>
           </div>
         </div>
       </div>
@@ -281,90 +286,7 @@
           </button>
         </div>
         <div class="work__projects">
-          <!-- <a href="#" class="project" data-type="front-end">
-            <img
-              src="/assets/img/projects/drum.PNG"
-              alt=""
-              class="project__img"
-            />
-            <div class="project__description">
-              <h4 class="project__title">Jellys</h4>
-              Go to
-              <i class="fab fa-youtube project__icon"></i>
-              Youtube
-              <h4 class="project__part">Front-end</h4>
-            </div>
-          </a>
-          <a href="#" class="project" data-type="front-end">
-            <img
-              src="/assets/img/projects/filter.PNG"
-              alt=""
-              class="project__img"
-            />
-            <div class="project__description">
-              <h4 class="project__title">Jellys</h4>
-              Go to
-              <i class="fab fa-youtube project__icon"></i>
-              Youtube
-              <h4 class="project__part">Front-end</h4>
-            </div>
-          </a>
-          <a href="#" class="project" data-type="back-end">
-            <img
-              src="assets/img/projects/gallery.PNG"
-              alt=""
-              class="project__img"
-            />
-            <div class="project__description">
-              <h4 class="project__title">Jellys</h4>
-              Go to
-              <i class="fab fa-youtube project__icon"></i>
-              Youtube
-              <h4 class="project__part">Front-end</h4>
-            </div>
-          </a>
-          <a href="#" class="project" data-type="back-end">
-            <img
-              src="assets/img/projects/horizontal.PNG"
-              alt=""
-              class="project__img"
-            />
-            <div class="project__description">
-              <h4 class="project__title">Jellys</h4>
-              Go to
-              <i class="fab fa-youtube project__icon"></i>
-              Youtube
-              <h4 class="project__part">Front-end</h4>
-            </div>
-          </a>
-          <a href="#" class="project" data-type="mobile">
-            <img
-              src="/assets/img/projects/paint.PNG"
-              alt=""
-              class="project__img"
-            />
-            <div class="project__description">
-              <h4 class="project__title">Jellys</h4>
-              Go to
-              <i class="fab fa-youtube project__icon"></i>
-              Youtube
-              <h4 class="project__part">Front-end</h4>
-            </div>
-          </a>
-          <a
-            href="/assets/img/projects/yoga.PNG"
-            class="project"
-            data-type="mobile"
-          >
-            <img src="" alt="" class="project__img" />
-            <div class="project__description">
-              <h4 class="project__title">Jellys</h4>
-              Go to
-              <i class="fab fa-youtube project__icon"></i>
-              Youtube
-              <h4 class="project__part">Front-end</h4>
-            </div>
-          </a> -->
+         
         </div>
       </div>
     </section>
@@ -377,25 +299,33 @@
         <h3 class="contact__subtitle">Get In Touch</h3>
         <div class="contactbox">
           <div class="contactbox__left">
-            <form action="" class="contactbox__form">
+            <form id="contactbox__form">
               <input
                 type="text"
                 placeholder="Name"
                 class="contactbox__form__item"
+                name="name"
+                required
               />
               <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 class="contactbox__form__item"
+                name="email"
+                required
               />
               <input
                 type="text"
-                placeholder="Subject"
+                placeholder="Phone number"
                 class="contactbox__form__item"
+                name="phone_number"
+                required
               />
               <textarea
                 placeholder="Your Message"
                 class="contactbox__form__item"
+                name="message"
+                required
               ></textarea>
               <button type="submit" class="contact__btn">SEND MESSAGE</button>
             </form>
@@ -429,7 +359,7 @@
               <i class="fas fa-file-download contact__icon"></i>
               <h5>Download</h5>
               <span>
-                <a href="" download="정요섭포트폴리오">Porfolio</a>
+                <a href="/assets/download/portfolio_yosup.pdf" download="정요섭포트폴리오">Porfolio</a>
               </span>
             </div>
           </div>

@@ -61,13 +61,19 @@ let projects_obj = {
     img: "/assets/img/projects/portfolio.PNG",
     name: "Portfolio",
     part: "front-end",
-    url: "",
+    url: "https://youtu.be/Ce3XXm-XtGk",
   },
   8: {
     img: "/assets/img/projects/school.PNG",
     name: "InterView",
     part: "back-end",
     url: "https://youtu.be/Kd3G7OvXQmQ",
+  },
+  9: {
+    img: "/assets/img/projects/scorers.PNG",
+    name: "Scorers",
+    part: "front-end",
+    url: "https://youtu.be/yBgdU86bwnI",
   },
 };
 
@@ -109,7 +115,7 @@ const getHeight = (section) => {
   return section.getBoundingClientRect().height;
 };
 
-// 3. getPrevSectionHeight function
+// 4. getPrevSectionHeight function
 // 재귀함수 사용
 // section을 넣으면 자기 section 전 section까지 높이를 더해서 구해줌
 
@@ -122,7 +128,7 @@ const getPrevHeight = (section) => {
   }
 };
 
-// 4. Button lights up when scrolling
+// 5. Button lights up when scrolling
 
 const scrollLightButton = () => {
   const list = document.querySelectorAll(".navbar__list");
@@ -157,7 +163,7 @@ const scrollLightButton = () => {
   });
 };
 
-// 5. scroll to section when click button and LightButton
+// 6. scroll to section when click button and LightButton
 
 const navbarLists = document.querySelector(".navbar__lists");
 const scrollClickButton = () => {
@@ -180,7 +186,7 @@ const scrollClickButton = () => {
   });
 };
 
-// 6. navbar
+// 7. navbar
 
 const navbarToggle = () => {
   const navbarToggle = document.querySelector(".navbar__toggle-btn");
@@ -190,7 +196,7 @@ const navbarToggle = () => {
   });
 };
 
-// 7. homeContainer opacticy
+// 8. homeContainer opacticy
 
 const homeConainer_Opactiy = () => {
   const homeContainer = document.querySelector(".home__container");
@@ -200,7 +206,7 @@ const homeConainer_Opactiy = () => {
   });
 };
 
-// 8. Projects Scattring to HTML
+// 9. Projects Scattring to HTML
 
 const scattering_Project = () => {
   const projectContainer = document.querySelector(".work__projects");
@@ -231,7 +237,7 @@ const scattering_Project = () => {
   projectContainer.innerHTML = temp_str;
 };
 
-// 9. category__count Scattering to HTML
+// 10. category__count Scattering to HTML
 
 const project_num = () => {
   let all_num = 0;
@@ -256,7 +262,7 @@ const project_num = () => {
   count[3].innerHTML = mobile_num;
 };
 
-// 9. project filtering
+// 11. project filtering
 
 const filtering_Project = () => {
   const workBtnContainer = document.querySelector(".work__categories");
@@ -289,7 +295,7 @@ const filtering_Project = () => {
   });
 };
 
-// 10. animation skillvalue
+// 12. animation skillvalue
 
 const setSkillValue = () => {
   const skill_values = document.querySelectorAll(".skill__value");
@@ -297,13 +303,55 @@ const setSkillValue = () => {
   Object.keys(skills_obj).forEach((key) => {
     const skill = skills_obj[key];
     const skill_experience = `${skill.ex}`;
+    // ("service_xv8816v", "template_3l6jszi", "#contactbox__form")
 
     skill_values[count].style.width = skill_experience;
     count += 1;
   });
 };
 
-// 11. start function
+// 13. get Email
+const sendEmail = () => {
+  (function () {
+    emailjs.init("user_ESLwYmWgJ2he4OIypw2eN");
+  })();
+
+  const sendForm = document.querySelector("#contactbox__form");
+  sendForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    emailjs
+      .sendForm("service_xv8816v", "template_3l6jszi", "#contactbox__form")
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+
+          if (response.status == 200) {
+            successEmail();
+          }
+        },
+        function (err) {
+          console.log("FAILED...", err);
+          console.log(err);
+        }
+      );
+  });
+};
+
+// 14. success email
+
+const successEmail = () => {
+  const items = document.querySelectorAll(".contactbox__form__item");
+
+  items.forEach((item) => {
+    item.classList.add("success");
+
+    setTimeout(() => {
+      item.classList.remove("success");
+    }, 1000);
+  });
+};
+
+// 15. start function
 const init = function () {
   transNavbar();
   scrollLightButton();
@@ -313,6 +361,7 @@ const init = function () {
   project_num();
   filtering_Project();
   navbarToggle();
+  sendEmail();
 };
 
 init();
